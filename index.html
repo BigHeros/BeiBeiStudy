@@ -1,8 +1,30 @@
 <meta charset="utf-8" emacsmode="-*- markdown -*-"><link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/website.css?">
 
-                          **BeiBeiStudy**
+                          **习惯是最强大的老师**
 
-习惯是最强大的老师
+
+
+项目是 Swift 工程，但一些功能需要 OC 混编。对于后缀为 .m 文件，只需要添加如下语句即可调用 Swift 中的类或变量（记得添加 @objc）：
+
+# 编译配置
+
+```cpp
+#import "YourProjectName-Swift.h"
+```
+
+但若 OC 类需要使用 C++ 特性而后缀为 .mm 时，还会报错。这时，需要在 Build Phases 中的 Compile Sources 中找到该 OC 类，双击后输入
+
+
+
+```undefined
+-fcxx-modules
+```
+
+即可。
+
+# V2r 配置尝试
+
+H2 + stl .不太稳定，但是速度感觉很快，设备耗电并不明显，比websocket要省电很多。
 
 # Shader 图像
 
